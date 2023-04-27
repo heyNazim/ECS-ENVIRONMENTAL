@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ECS-Encironmental</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<style>
+  @media only screen and (max-width: 744px)
+{
+  .newcarousel-cell {
+    width:96%!important;
+    height: 500px!important;}
+}
+</style>
+  </head>
+  <body>
+
+<!-- sidebar -->
+    <div id="mySidenav" class="sidenav">
+      <a href="tel:1800-102-0584" id="whatsapp"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-telephone-forward" viewBox="0 0 16 16">
+        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm10.762.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708z"/>
+      </svg>&nbsp;&nbsp; Call Us</a>
+      <a href="https://wa.me/01204243838" id="callus"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+      </svg>&nbsp;&nbsp; Chat With Us</a>
+    </div>
+    <!-- mobile nav -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">
+            <img src="./assets/logo 1.png" height="40px" alt="">
+
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About
+                </a>
+                <ul class="dropdown-menu">
+                  <li> <a class="dropdown-item" href="./about-us.html">About us</a></li>
+                  <li><a class="dropdown-item" href="./ourindustries.html">Industry Overviews</a></li>
+                  <li><a class="dropdown-item" href="./scopeofwork.html">Scope Of Work</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./socialrepo.html">Social Responsibility</a>
+              </li>
+         
+           
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Our Waste Management Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li> <a class="dropdown-item" href="./e-waste.html">E-Waste</a></li>
+                  <li><a class="dropdown-item" href="./plasticwaste.html">Plastic-Waste </a></li>   
+                  <li><a class="dropdown-item" href="./Hazardous-waste.html">Hazardous-Waste </a></li>
+                  <li><a class="dropdown-item" href="./battery-waste.html">battery-waste </a></li>
+                </ul>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact Us</a>
+              </li>
+            
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+
+<header>
+
+  <div class="newheader d-flex justify-content-between">
+<div class="newhead1">
+  <p class="px-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+    <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+  </svg> www.theecsindia.com</p>
+  <p class="px-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+  </svg> info@theecsindia.com</p> 
+  <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+  </svg> 1800-102-0584</p>
+
+</div>
+<div class="newhead2 hvr-bounce-to-right" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <a href="#"> REQUEST FOR A PICKUP  <svg  class="text-dark" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+    <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+  </svg></a>
+</div>
+  </div>
+</header>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">REQUEST FOR A PICKUP</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <input class="w-100" type="text" placeholder="Enter Your Name"> <br> <br>
+          <input class="w-100" type="email" placeholder="Enter Your email"> <br> <br>
+          <input class="w-100" type="tel" placeholder="Mobile No"> <br> <br>
+          <input class="w-100" type="text" placeholder="Address"> <br> <br>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Enter your Massage</label>
+          </div> <br>
+          <div class="submit">
+            <a href="">SEND MESSAGE <img  src="./assets/small truck.png" height="37px" alt=""></a> <br><br><br>
+        
+          </div>
+         
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">REQUEST FOR A PICKUP</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <input class="w-100" type="text" placeholder="Enter Your Name"> <br> <br>
+          <input class="w-100" type="email" placeholder="Enter Your email"> <br> <br>
+          <input class="w-100" type="tel" placeholder="Mobile No"> <br> <br>
+          <input class="w-100" type="text" placeholder="Address"> <br> <br>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Enter your Massage</label>
+          </div> <br>
+          <div class="submit">
+            <a href="">SEND MESSAGE <img  src="./assets/small truck.png" height="37px" alt=""></a> <br><br><br>
+        
+          </div>
+         
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="newdesktop">
+  <div class="container-fluid">
+    <div class="d-flex">
+      <div class="desk1">
+        <a href="./index.html">
+    <a href="./index.html">
+          <img src="./assets/logo 1.png" height="60px" alt="">
+
+        </a>
+        </a>
+      </div>
+      <div class="desk2 d-flex justify-content-center" style="  align-items: center; padding-top: 10px; 
+      ">
+        <div class="dropdown mx-3 hvr-shutter-out-vertical ">
+         <a href="./index.html"> <button  class="dropbtn">Home</button></a>
+        </div>
+        <div class="dropdown mx-3 hvr-shutter-out-vertical ">
+          <button class="dropbtn">About</button>
+          <div class="dropdown-content">
+            <a href="./about-us.html">About us</a>
+            <a href="./ourindustries.html">Industry Overviews</a>
+            <a href="./scopeofwork.html">Scope Of work</a>
+          </div>
+        </div>
+        <div class="dropdown hvr-shutter-out-vertical mx-3">
+          <button class="dropbtn">Waste  Services</button>
+          <div class="dropdown-content">
+            <a href="./e-waste.html">E-Waste Service</a>
+            <a href="./plasticwaste.html">Plastic Waste </a>
+            <a href="./battery-waste.html">Battery Waste</a>
+            <a href="./Hazardous-waste.html">Hazardous Waste</a>
+        
+          </div>
+        </div>
+      
+        <div class="dropdown mx-3 hvr-shutter-out-vertical ">
+          <a href="./socialrepo.html"> <button  class="dropbtn">Social Responsibility</button></a>
+         </div>
+        <div class="dropdown mx-3 hvr-shutter-out-vertical ">
+          <a href="./contact.html"> <button  class="dropbtn">Contact</button></a>
+         </div>
+        
+      </div>
+      <div class="desk3 pt-2">
+        <img src="./assets/Form Call.png" height="50px" alt="">
+        <a style="font-size: 15px;" href="tel:+91-1800 102 0581">1800-102-0584 </a>  
+     
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--  -->
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                  <h1>Reliable & Affordable Waste Services</h1>
+                  <a href="http://www6.com.com/?template=ARROW_3&tdfs=0&s_token=1665221479.0122750000&uuid=1665221479.0122750000&term=Asia%20Colocated%20Servers&term=India%20Colocated%20Servers&term=Custom%20Colocated%20Servers&searchbox=0&showDomain=0&backfill=0">Request a Pickup</a>
+                </div>
+                <div class="col-md-6  ">
+                    <div class="truck">
+                      <marquee behavior="" direction="right"><img  src="./assets/Truck (1).png" height="400px" alt=""></marquee> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <!--  -->
+
+
+<div class="yellowemptybox">
+   
+        <div class="emptycontent text-center">
+            <div class="container-fluid">
+                <div class="row baba">
+                    <div class="col-3">
+                      <a href=""> 
+                       <img src="./assets/Youe Estimate Load Size.png"  alt="">
+                      </a>   <p>We Responsibly <br> Dispose</p>
+                    </div>
+                    <div class="col-3">
+                      <a href=""> 
+                       <img src="./assets/You Choose A Time.png"  alt="">
+                      </a>   <p>You Choose  <br> A Time</p>
+                    </div>
+                    <div class="col-3">
+                      <a href=""> 
+                     <img src="./assets/We Pick & Clean Up.png"  alt="">
+                      </a>  <p>We Pick  <br> & Clean Up</p>
+                    </div>
+                    <div class="col-3">
+                      <a href=""> 
+                      <img src="./assets/We Responsibly Dispose.png"  alt="">
+                      </a>
+                      <p>We Responsibly <br> Dispose</p>
+                      
+                      
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+   
+</div>
+
+<!-- industries we served -->
+<div class="industries">
+  <div class="container">
+    <p class="text-center">We Cover Industry</p>
+    <h1 class="text-center">Industry We Served</h1>
+    
+    
+  </div>
+</div>
+
+
+
+
+<!-- new industry we served -->
+<div class="newindustry">
+  <div class="container">
+    <div class="newcarousel"
+    data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": true, "pageDots": false,"autoPlay": 2500, "pauseAutoPlayOnHover": false  }'>
+      <div class="newcarousel-cell text-center">
+        <a href="./plasticwaste.html">
+          <div class="newser">
+            <img  src="./assets/wensday.webp" class="img-fluid" alt="">
+            <div class="subser">
+              <img src="./assets/Plastic Garbage.png"  alt="">
+    
+            </div>
+            <h4>Plastic Garbage</h4>
+            <p>Environmental Compliance Services supports the need for improved circularity of global plastics markets - encouraging reduce, reuse and recycle where possible to mitigate the release of plastic into the environment. </p>
+         
+           </div>
+        </a>
+   
+       
+  
+        
+      </div>
+      <div class="newcarousel-cell text-center">
+        <a href="./battery-waste.html">
+          <div class="newser">
+            <img  src="./assets/industries battery waste.png" class="img-fluid" alt="">
+            <div class="subser">
+              <img src="./assets/Metal Garbage.png"  alt="">
+    
+            </div>
+            <h4>Battery-Waste Garbage</h4>
+            <p>The Batteries Management and Handling Rules enacted in the year 2001 with the primary objective of ensuring safe disposal of discarded lead acid batteries involving all stake holders. </p>
+         
+           </div>
+        </a>
+     
+       
+  
+        
+      </div>
+      <div class="newcarousel-cell text-center">
+        <a href="./e-waste.html">
+          <div class="newser">
+            <img  src="./assets/industries e waste.png" class="img-fluid" alt="">
+            <div class="subser">
+              <img src="./assets/Metal Garbage.png"  alt="">
+    
+            </div>
+            <h4>E-Waste Garbage</h4>
+            <p>Electronic waste, or e-waste, is a term for electronic products that have become unwanted, non-working or obsolete, and have essentially reached the end of their useful life.</p>
+         
+           </div>
+        </a>
+     
+       
+  
+        
+      </div>
+
+      <!-- <div class="newcarousel-cell text-center">
+        <a href="#">
+          <div class="newser">
+            <img  src="./assets/papper image.jpg" class="img-fluid" alt="">
+            <div class="subser">
+              <img src="./assets/Paper Garbage.png"  alt="">
+    
+            </div>
+            <h4>Paper Garbage</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, laborum. Sapiente perferendis consequatur, ex reprehenderit doloribus suscipit quisquam, repellat maxime sequi, dolore fuga quos autem. </p>
+         
+           </div>
+        </a>
+   
+       
+  
+        
+      </div>
+      <div class="newcarousel-cell text-center">
+        <a href="#">
+          <div class="newser">
+            <img  src="./assets/metal garbage.jfif" class="img-fluid" alt="">
+            <div class="subser">
+              <img src="./assets/Metal Garbage.png"  alt="">
+    
+            </div>
+            <h4>Metal Garbage</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, laborum. Sapiente perferendis consequatur, ex reprehenderit doloribus suscipit quisquam, repellat maxime sequi, dolore fuga quos autem. </p>
+         
+           </div>
+           
+      
+        </a>
+      
+        
+      </div> -->
+    
+ 
+
+<!-- 
+      <div class="newcarousel-cell text-center">
+        <a href="./Hazardous-waste.html">
+          <div class="newser">
+            <img  src="./assets/industries hazardous waste.png" class="img-fluid" alt="">
+            <div class="subser">
+              <img src="./assets/Metal Garbage.png"  alt="">
+    
+            </div>
+            <h4>Hazardous-waste Garbage</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, laborum. Sapiente perferendis consequatur, ex reprehenderit doloribus suscipit quisquam, repellat maxime sequi, dolore fuga quos autem. </p>
+         
+           </div>
+        </a>
+      
+       
+  
+        
+      </div> -->
+
+  
+ 
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- counts -->
+<div class="counts">
+  <div class="container">
+    <div class="row d-flex justify-content-around text-center">
+  <div class="col-md-3">
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-recycle" viewBox="0 0 16 16">
+      <path d="M9.302 1.256a1.5 1.5 0 0 0-2.604 0l-1.704 2.98a.5.5 0 0 0 .869.497l1.703-2.981a.5.5 0 0 1 .868 0l2.54 4.444-1.256-.337a.5.5 0 1 0-.26.966l2.415.647a.5.5 0 0 0 .613-.353l.647-2.415a.5.5 0 1 0-.966-.259l-.333 1.242-2.532-4.431zM2.973 7.773l-1.255.337a.5.5 0 1 1-.26-.966l2.416-.647a.5.5 0 0 1 .612.353l.647 2.415a.5.5 0 0 1-.966.259l-.333-1.242-2.545 4.454a.5.5 0 0 0 .434.748H5a.5.5 0 0 1 0 1H1.723A1.5 1.5 0 0 1 .421 12.24l2.552-4.467zm10.89 1.463a.5.5 0 1 0-.868.496l1.716 3.004a.5.5 0 0 1-.434.748h-5.57l.647-.646a.5.5 0 1 0-.708-.707l-1.5 1.5a.498.498 0 0 0 0 .707l1.5 1.5a.5.5 0 1 0 .708-.707l-.647-.647h5.57a1.5 1.5 0 0 0 1.302-2.244l-1.716-3.004z"/>
+    </svg>
+   <h2> 123+</h2>
+    <p class="cp">Industries served</p>
+    <p class="scp">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+
+  </div>
+  <div class="col-md-3">
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-recycle" viewBox="0 0 16 16">
+      <path d="M9.302 1.256a1.5 1.5 0 0 0-2.604 0l-1.704 2.98a.5.5 0 0 0 .869.497l1.703-2.981a.5.5 0 0 1 .868 0l2.54 4.444-1.256-.337a.5.5 0 1 0-.26.966l2.415.647a.5.5 0 0 0 .613-.353l.647-2.415a.5.5 0 1 0-.966-.259l-.333 1.242-2.532-4.431zM2.973 7.773l-1.255.337a.5.5 0 1 1-.26-.966l2.416-.647a.5.5 0 0 1 .612.353l.647 2.415a.5.5 0 0 1-.966.259l-.333-1.242-2.545 4.454a.5.5 0 0 0 .434.748H5a.5.5 0 0 1 0 1H1.723A1.5 1.5 0 0 1 .421 12.24l2.552-4.467zm10.89 1.463a.5.5 0 1 0-.868.496l1.716 3.004a.5.5 0 0 1-.434.748h-5.57l.647-.646a.5.5 0 1 0-.708-.707l-1.5 1.5a.498.498 0 0 0 0 .707l1.5 1.5a.5.5 0 1 0 .708-.707l-.647-.647h5.57a1.5 1.5 0 0 0 1.302-2.244l-1.716-3.004z"/>
+    </svg>
+    <h2>    3577</h2>
+
+    <p class="cp">Waste pick up</p>
+    <p class="scp">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+
+  </div>
+  <div class="col-md-3">
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-recycle" viewBox="0 0 16 16">
+      <path d="M9.302 1.256a1.5 1.5 0 0 0-2.604 0l-1.704 2.98a.5.5 0 0 0 .869.497l1.703-2.981a.5.5 0 0 1 .868 0l2.54 4.444-1.256-.337a.5.5 0 1 0-.26.966l2.415.647a.5.5 0 0 0 .613-.353l.647-2.415a.5.5 0 1 0-.966-.259l-.333 1.242-2.532-4.431zM2.973 7.773l-1.255.337a.5.5 0 1 1-.26-.966l2.416-.647a.5.5 0 0 1 .612.353l.647 2.415a.5.5 0 0 1-.966.259l-.333-1.242-2.545 4.454a.5.5 0 0 0 .434.748H5a.5.5 0 0 1 0 1H1.723A1.5 1.5 0 0 1 .421 12.24l2.552-4.467zm10.89 1.463a.5.5 0 1 0-.868.496l1.716 3.004a.5.5 0 0 1-.434.748h-5.57l.647-.646a.5.5 0 1 0-.708-.707l-1.5 1.5a.498.498 0 0 0 0 .707l1.5 1.5a.5.5 0 1 0 .708-.707l-.647-.647h5.57a1.5 1.5 0 0 0 1.302-2.244l-1.716-3.004z"/>
+    </svg>
+    <h2>752+</h2>
+    
+    <p class="cp">happy customers</p>
+    <p class="scp"> Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+
+  
+  </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- why choose us -->
+<div class="chooseus">
+  <div class="container">
+    <div class="d-flex">
+      <div class="">
+        <div class="choose-1">
+          <img src="./assets/why join us.png" height="300px" width="500px" alt="">
+        </div>
+      </div>
+      <div class="">
+        <div class="choose-2">
+          <h2>why choose us?</h2>
+          <p>With comprehensive experience in handling difficult or hazardous wastes, we can work with all kind of industries and businesses with great service.
+
+          </p>
+          <ul>
+            <li><img src="./assets/yellow tick.png" height="30px" alt="">We can handle Health and Biohazardous Waste
+            </li>
+            <li><img src="./assets/yellow tick.png" height="30px" alt="">More than 20+ years of experience
+            </li>
+            <li><img src="./assets/yellow tick.png" height="30px" alt="">Free quotation and consultation for your waste disposal problems
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
+  
+  </div>
+</div>
+<!-- customer feedback -->
+<div class="feedback">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <p>Our Costumer Feedback</p>
+        <h2>What Our Customers Are Talking About Our Services</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nesciunt.</p><br>
+        <a href="">View all Feedbacks</a>
+        <br><br>
+      </div>
+      <div class="col-md-7">
+  
+
+<!-- Flickity HTML init -->
+<div class="carousel"
+  data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false,"autoPlay": 1300, "pauseAutoPlayOnHover": true  }'>
+  <div class="carousel-cell">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <h6 class="corehead">Cleaned and Disposed Well</h6>
+    <p>Lorem ipsum,. Explicabo minima perferendis eos iste non dolorum voluptatem incidunt nihil nesciunt eligendi.
+    </p>
+    <h6>Nikhil Yadav</h6>
+    <p>customer</p>
+    <img src="./assets/dp.jfif" height="60px" width="60px" alt="">
+  </div>
+  <div class="carousel-cell">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <h6 class="corehead">They give best service</h6>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus alias quam voluptates sit, beatae laudantium incidunt molestias. Eius, iste nulla?</p>
+    <h6>Ravi Ashutosh</h6>
+    <p>customer</p>
+    <img src="./assets/feedbackboy1.png" height="60px" width="60px" alt="">
+  </div>
+  <div class="carousel-cell">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <h6 class="corehead">They are very hard working</h6>
+    <p>Lorem ipsum dolor sit a. Accusamus alias quam voluptates sit, beatae laudantium incidunt molestias. Eius, iste nulla?</p>
+    <h6>Ankit Rawat</h6>
+    <p>customer</p>
+    <img src="./assets/feedbackboy2.jpg" height="60px" width="60px" alt="">
+  </div>
+  <div class="carousel-cell">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+ 
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <h6 class="corehead">They working well</h6>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus alias quam voluptates sit, beatae laudantium incidunt molestias. Eius, iste nulla?</p>
+    <h6>RItik Pal</h6>
+    <p>customer</p>
+    <img src="./assets/feedbackboy3.jpg" height="60px" width="60px" alt="">
+  </div>
+  <div class="carousel-cell">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <h6 class="corehead">They Are Very Flexible</h6>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus alias quam voluptates sit, beatae laudantium incidunt molestias. Eius, iste nulla?</p>
+    <h6>Rahul Kumar</h6>
+    <p>customer</p>
+    <img src="./assets/feedbackoy4.avif" height="60px" width="60px" alt="">
+  </div>
+  <div class="carousel-cell">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>
+ 
+    <h6 class="corehead">They Are Very Flexible</h6>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus alias quam voluptates sit, beatae laudantium incidunt molestias. Eius, iste nulla?</p>
+    <h6>Ansh </h6>
+    <p>customer</p>
+    <img src="./assets/dp.jfif" height="60px" width="60px" alt="">
+  </div>
+
+</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- our services -->
+<div class="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <p>What We Are Offering -</p>
+        <h1>The Services We're Providing to Our Customers.</h1>
+      </div>
+      <div class="col-md-7">
+        <p class="pt-xl-5">Environmental Compliance Services offers environmental compliance consulting services essential to meet the requirements of central and state environmental regulatory programs. Our wide experience and broad expertise make ECS your sole source for environmental compliance management services.
+
+        </p>
+      </div>
+    </div> <br>
+    <div class="row">
+      <div class="col-md-3">
+        <img class="img-fluid" src="./assets/service1.jfif"   alt="">
+        <div class="sersub text-center">
+          <img src="./assets/Service 1.png" height="80px" alt="">
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <img class="img-fluid" src="./assets/service3.jfif"   alt="">
+        <div class="sersub text-center">
+          <img src="./assets/Service 2.png" height="80px" alt="">
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <img class="img-fluid" src="./assets/pppppp (1).jpg"   alt="">
+        <div class="sersub text-center">
+          <img src="./assets/Service 3.png" height="80px" alt="">
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <img class="img-fluid" src="./assets/download-1-1.webp.jpg"   alt="">
+        <div class="sersub text-center">
+          <img src="./assets/Service 4.png" height="80px" alt="">
+
+        </div>
+      </div>
+      <p class="text-center pt-5 "></p>
+    </div>
+  </div>
+</div>
+
+<!-- latestnews -->
+<div class="latestnews">
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center">Latest News & Articles</h1>
+      <div class="col-md-4">
+        <img class="img-fluid" src="./assets/black waste.jpg" alt="">
+        <p>why recyclinng is important</p>
+      </div>
+      <div class="col-md-4">
+        <img class="img-fluid" src="./assets/black waste 2.jpg" alt="">
+        <p>Learn how ro manage e waste</p>
+      </div>
+      <div class="col-md-4">
+        <div class="row article">
+          <div class="col-md-4">
+            <img src="./assets/black waste 2.jpg" alt="">
+          </div>
+          <div class="col-8">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+              <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg> 07 Aug / <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+              <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+              <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"/>
+            </svg> 5 comments</span>
+            <h5>Podcasting Optional to <br>management of</h5> 
+            </div>
+         
+        </div>
+        <div class="row article">
+          <div class="col-md-4">
+            <img src="./assets/black waste 2.jpg" alt="">
+          </div>
+          <div class="col-8">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+              <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg> 19 sep / <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+              <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+              <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"/>
+            </svg> 9 comments</span>
+            <h5>Podcasting Optional to <br>management of</h5> 
+            </div>
+         
+        </div>
+        <div class="row article">
+          <div class="col-md-4">
+            <img src="./assets/black waste 2.jpg" alt="">
+          </div>
+          <div class="col-8">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+              <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+              <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg> 14 Dec / <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+              <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+              <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"/>
+            </svg> 18 comments</span>
+            <h5>Podcasting Optional to <br>management of</h5> 
+            </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- google map -->
+<div class="googlemap">
+  <div class="container-fluid">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.0109917857444!2d77.34462479999999!3d28.6893178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb3c15b2ebbd%3A0x6ae9304f61d4f4b!2sEnvironmental%20Compliance%20Services!5e0!3m2!1sen!2sin!4v1665647949954!5m2!1sen!2sin" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+
+
+<!-- form -->
+<div class="contact-form">
+  <div class="container">
+<div class="row">
+  <div class="col-md-7 leftform">
+<p>Send A Massage</p>
+<h1>Request a free Quote</h1> <br><br>
+<form action="">
+  <input type="text" placeholder="Enter Your Name">
+  <input type="email" placeholder="Enter Your email"> <br>
+  <input type="tel" placeholder="Mobile No">
+  <input type="text" placeholder="Address">
+  <div class="form-floating">
+    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+    <label for="floatingTextarea2">Enter your Massage</label>
+  </div> <br>
+  <div class="submit">
+    <a href="">SEND MESSAGE <img  src="./assets/small truck.png" height="37px" alt=""></a> <br><br><br>
+
+  </div>
+ 
+</form>
+  </div>
+  <div class="col-md-5 rightform">
+    <div class="formdustbin text-center">
+      <img  src="./assets/Form Dustbin.png" height="80px" alt="">
+
+    </div>
+    <h1 class="text-center">Commercial Waste Services In Your Area</h1>
+    <a href=""> <img src="./assets/Form Call.png" height="60px" alt=""> 1800-102-0584</a>
+    <a href=""><img src="./assets/Form Mail.png" height="60px" alt=""> info@theecsindia.com</a>
+    <a href=""><img src="./assets/Form Website.png" height="60px" alt=""> www.theecsindia.com</a>
+
+  </div>
+</div>
+  </div>
+</div>
+
+
+<!-- Partners -->
+<div class="partners">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"><h1>50+</h1>
+      <h6>Partners in World Wide</h6>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-12">
+            <p>OurTop Global Partners</p>
+            <div class="" data-flickity='{ "autoPlay": 1500 }'>
+              <div class="partner-cell">
+                <img src="./assets/Chicco.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/TCL.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/impex.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/View Sonic.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/artsana group.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/terumo.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/noise.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/boat.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/butterfly.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/phoenix contact.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/i bell.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/Hamdard.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/dimension data.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/asianet.png" width="120px" height="100px" alt="">
+              </div>
+              <!-- <div class="partner-cell">
+                <img src="./assets/hikvision.png" width="120px" height="100px" alt="">
+              </div> -->
+           
+          
+
+
+              <div class="partner-cell">
+                <img src="./assets/noise.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/boat.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/butterfly.png" width="120px" height="100px" alt="">
+              </div>
+              <div class="partner-cell">
+                <img src="./assets/phoenix contact.png" width="120px" height="100px" alt="">
+              </div>
+            
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<footer>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 boat">
+      <h2>About</h2>
+      <p>Deals with all types of waste, including industrial, biological, household, municipal, organic, biomedical, radioactive wastes.</p>
+      <input type="email"> <br><br><br>
+      <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+      </svg></a>
+      <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+      </svg></a>
+      <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+      </svg></a>
+      <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+      </svg></a>
+    </div>
+    <div class="col-md-2">
+      <h3>Links</h3>
+      <a href="./about-us.html">About</a>
+      <a href="http://www6.com.com/?template=ARROW_3&tdfs=0&s_token=1665221479.0122750000&uuid=1665221479.0122750000&term=Asia%20Colocated%20Servers&term=India%20Colocated%20Servers&term=Custom%20Colocated%20Servers&searchbox=0&showDomain=0&backfill=0">Request Pickup</a>
+      <a href="">Management</a>
+      <a href="">Start Service</a>
+      <a href="./contact.html">Contact</a>
+    </div>
+    <div class="col-md-2">
+      <h3>Services</h3>
+      <a href="./ourindustries.html">Zero Waste</a>
+      <a href="./dumpster-rental.html">Dumpster Rental</a>
+      <a href="./trash-removal.html">Trash Removal</a>
+      <a href="">Recycling Services</a>
+      <a href="./residential-recycling.html">Residential Pickup</a>
+    </div>
+    <div class="col-md-4">
+      <h3>Contact Details</h3>
+      <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-map" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"/>
+        <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"/>
+      </svg> A-136, G-3, Shalimar Garden, Extention 2,
+        Sahibabad, Ghaziabad 201005</p>
+      <a href="tel:01204243838"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+      <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+    </svg> 0120-424-3838</a>
+    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+    </svg> info@theecsindia.com</a>
+    </div>
+  </div>
+</div>
+</footer>
+
+<div class="lastfooter">
+  <div class="container">
+    <p class="text-center">Copyright <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+      <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+    </svg> 2022 <span>Encironmental Compliance Services .</span> 
+ All Right Reserved </p>
+  </div>
+</div>
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+</svg></button>
+<!-- button bottom to top -->
+<script>
+  // Get the button
+  let mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+<!-- flickity -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>
